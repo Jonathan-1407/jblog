@@ -34,7 +34,7 @@ class AddForeignKeysToPostsTable extends Migration
             $table->dropColumn('topic_id');
 
             $table->dropForeign(['author_id']);
-            $table->dropColumn('topic_id');
+            $table->dropColumn('author_id');
         });
     }
 }
