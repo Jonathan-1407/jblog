@@ -1,0 +1,57 @@
+<template>
+    <div>
+        <div class="p-4">
+            <div class=" w-full lg:max-w-full">
+                <div
+                    class=" bg-white shadow-lg rounded-lg p-4 flex flex-col justify-between leading-normal"
+                >
+                    <div class="mb-6">
+                        <router-link
+                            :to="{ name: 'Post', params: { id: post.id } }"
+                        >
+                            <div class="text-gray-900 font-bold text-xl mb-2 hover:underline hover:text-gray-500">
+                                {{ post.title }}
+                            </div>
+                            <p class="text-gray-700 text-base">
+                                {{ post.lead }}
+                            </p>
+                        </router-link>
+                    </div>
+                    <div class="pb-2 text-right">
+                        <span
+                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                        >
+                            #photography
+                        </span>
+                        <span
+                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                        >
+                            #travel
+                        </span>
+                        <span
+                            class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                        >
+                            #fall
+                        </span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="text-sm">
+                            <p class="text-gray-600 leading-none">
+                            By {{ post.author.name }} &#8226; {{ post.created_at }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: "ListItem",
+    props: {
+        post: Object
+    }
+};
+</script>

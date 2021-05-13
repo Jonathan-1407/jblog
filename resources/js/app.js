@@ -4,14 +4,17 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
+import ApolloClient from "apollo-boost";
 import Vue from "vue";
+import VueApollo from "vue-apollo";
 import VueRouter from "vue-router";
 import "./bootstrap";
-import PostList from "./views/post/PostList.vue"
-import Post from "./views/post/Post.vue"
+import PostList from "./views/post/PostList.vue";
+import Post from "./views/post/Post.vue";
 
 window.Vue = Vue;
 Vue.use(VueRouter);
+Vue.use(VueApollo);
 
 const routes = [
     {
@@ -26,6 +29,15 @@ const routes = [
     }
 ];
 
+const apolloClient = new ApolloClient({
+    // You should use an absolute URL here
+    uri: "http://blog.test/graphql"
+});
+
+const apolloProvider = new VueApollo({
+    defaultClient: apolloClient
+});
+
 const router = new VueRouter({
     mode: "history",
     routes
@@ -39,5 +51,6 @@ const router = new VueRouter({
 
 const app = new Vue({
     el: "#app",
+    apolloProvider,
     router
 });
