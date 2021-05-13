@@ -5677,6 +5677,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ListItem",
   props: {
@@ -45401,9 +45404,9 @@ var render = function() {
               _c("div", { staticClass: "text-sm" }, [
                 _c("p", { staticClass: "text-gray-600 leading-none" }, [
                   _vm._v(
-                    "\n                        By " +
+                    "\n                            By " +
                       _vm._s(_vm.post.author.name) +
-                      " • " +
+                      " •\n                            " +
                       _vm._s(_vm.post.created_at) +
                       "\n                        "
                   )

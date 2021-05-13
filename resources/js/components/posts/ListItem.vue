@@ -9,7 +9,9 @@
                         <router-link
                             :to="{ name: 'Post', params: { id: post.id } }"
                         >
-                            <div class="text-gray-900 font-bold text-xl mb-2 hover:underline hover:text-gray-500">
+                            <div
+                                class="text-gray-900 font-bold text-xl mb-2 hover:underline hover:text-gray-500"
+                            >
                                 {{ post.title }}
                             </div>
                             <p class="text-gray-700 text-base">
@@ -37,7 +39,8 @@
                     <div class="flex items-center">
                         <div class="text-sm">
                             <p class="text-gray-600 leading-none">
-                            By {{ post.author.name }} &#8226; {{ post.created_at }}
+                                By {{ post.author.name }} &#8226;
+                                {{ post.created_at }}
                             </p>
                         </div>
                     </div>
