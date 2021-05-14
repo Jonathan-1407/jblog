@@ -157,9 +157,11 @@ export default {
                     }
                 }
             `,
-
             variables: function() {
                 return { id: this.$route.params.id };
+            },
+            error: function() {
+                this.$router.push({ name: '404' })
             }
         }
     },

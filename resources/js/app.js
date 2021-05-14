@@ -13,6 +13,7 @@ import PostList from "./views/post/PostList.vue";
 import Post from "./views/post/Post.vue";
 import TopicPosts from "./views/post/TopicPost.vue";
 import AuthorPost from "./views/post/AuthorPost.vue";
+import NotFound from "./views/NotFound.vue";
 
 window.Vue = Vue;
 Vue.use(VueRouter);
@@ -38,6 +39,11 @@ const routes = [
         path: "/author/:id",
         name: "AuthorPost",
         component: AuthorPost
+    },
+    {
+        path: "*",
+        name: "404",
+        component: NotFound
     }
 ];
 
