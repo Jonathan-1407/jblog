@@ -38,7 +38,18 @@
                     <div class="flex items-center">
                         <div class="text-sm">
                             <p class="text-gray-600 leading-none">
-                                By <b> {{ post.author.name }} </b> &#8226;
+                                By
+
+                                <router-link
+                                    :to="{
+                                        name: 'AuthorPost',
+                                        params: { id: post.author.id }
+                                    }"
+                                    class="text-gray-700 hover:underline"
+                                >
+                                    {{ post.author.name }}
+                                </router-link>
+                                &#8226;
                                 {{
                                     moment(post.created_at)
                                         .startOf("day")

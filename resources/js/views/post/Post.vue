@@ -57,8 +57,19 @@
 
         <div class="" v-else>
             <div class="text-md text-gray-600">
-                By <b>{{ post.author.name }}</b> in
-                {{ post.topic.name }} &#8226;
+                By
+                <b>
+                    <router-link
+                        :to="{
+                            name: 'AuthorPost',
+                            params: { id: post.author.id }
+                        }"
+                        class="hover:underline"
+                    >
+                        {{ post.author.name }}
+                    </router-link>
+                </b>
+                in {{ post.topic.name }} &#8226;
                 {{
                     moment(post.created_at)
                         .startOf("day")
@@ -87,8 +98,17 @@
                     />
                 </div>
                 <div class="flex flex-col justify-center">
-                    <div class="text-md text-gray-700">
-                        Written by <b>{{ post.author.name }}</b>
+                    <div class="text-md text-gray-600">
+                        Written by
+                        <router-link
+                            :to="{
+                                name: 'AuthorPost',
+                                params: { id: post.author.id }
+                            }"
+                            class="text-gray-800 hover:underline"
+                        >
+                            {{ post.author.name }}
+                        </router-link>
                     </div>
                     <div class="text-sm text-gray-600">
                         Published in
@@ -97,7 +117,7 @@
                                 name: 'Topic',
                                 params: { slug: post.topic.slug }
                             }"
-                                class="text-blue-400 hover:underline"
+                            class="text-blue-400 hover:underline"
                         >
                             {{ post.topic.name }}
                         </router-link>
