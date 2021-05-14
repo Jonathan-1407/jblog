@@ -39,3 +39,13 @@ type Post {
     author: User! @belongsTo
     topic: Topic! @belongsTo
 }
+
+input OrderByClause{
+    field: String!
+    order: SortOrder!
+}
+
+enum SortOrder {
+    ASC
+    DESC
+}

@@ -9,10 +9,20 @@ import Vue from "vue";
 import VueApollo from "vue-apollo";
 import VueRouter from "vue-router";
 import "./bootstrap";
+
+/* Global Components */
+import Navbar from "./components/navigation/Navbar.vue";
+
+/* Post views */
 import PostList from "./views/post/PostList.vue";
 import Post from "./views/post/Post.vue";
 import TopicPosts from "./views/post/TopicPost.vue";
 import AuthorPost from "./views/post/AuthorPost.vue";
+
+/* Auth views */
+import Login from "./views/auth/Login.vue";
+import Register from "./views/auth/Register.vue";
+
 import NotFound from "./views/NotFound.vue";
 
 window.Vue = Vue;
@@ -41,6 +51,16 @@ const routes = [
         component: AuthorPost
     },
     {
+        path: "/login",
+        name: "Login",
+        component: Login
+    },
+    {
+        path: "/register",
+        name: "Register",
+        component: Register
+    },
+    {
         path: "*",
         name: "404",
         component: NotFound
@@ -60,6 +80,9 @@ const router = new VueRouter({
     mode: "history",
     routes
 });
+
+/* Global components */
+Vue.component('navbar', Navbar);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
