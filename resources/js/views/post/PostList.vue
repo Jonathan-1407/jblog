@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="container mx-auto px-4 w-full md:w-3/4 lg:w-2/2 my-20">
-            <h2 class="text-4xl">All Posts</h2>
+            <h2 class="text-4xl">Posts</h2>
             <div v-if="$apollo.loading"></div>
             <div v-else>
                 <div v-for="post in posts" :key="post.id">
@@ -32,6 +32,10 @@ export default {
                     author {
                         id
                         name
+                    }
+                    topic {
+                        name
+                        slug
                     }
                 }
             }

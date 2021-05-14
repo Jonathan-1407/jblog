@@ -11,6 +11,7 @@ import VueRouter from "vue-router";
 import "./bootstrap";
 import PostList from "./views/post/PostList.vue";
 import Post from "./views/post/Post.vue";
+import TopicPosts from "./views/post/TopicPost.vue";
 
 window.Vue = Vue;
 Vue.use(VueRouter);
@@ -26,6 +27,11 @@ const routes = [
         path: "/post/:id",
         name: "Post",
         component: Post
+    },
+    {
+        path: "/topic/:slug",
+        name: "Topic",
+        component: TopicPosts
     }
 ];
 
