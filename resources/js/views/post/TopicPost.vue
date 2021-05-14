@@ -1,14 +1,16 @@
 <template>
     <div>
         <div class="container mx-auto px-4 w-full md:w-3/4 lg:w-2/2 my-20">
-            <div class="text-4xl">
-                <router-link to="/" class="text-gray-500 hover:underline">
-                    Posts
-                </router-link>
-                <span class="text-gray-500">/</span> {{ topic.name }}
+            <div v-if="$apollo.loading">
+                <PostItemLoad v-for="item in 20" :key="item"></PostItemLoad>
             </div>
-            <div v-if="$apollo.loading"></div>
             <div v-else>
+                <div class="text-4xl">
+                    <router-link to="/" class="text-gray-500 hover:underline">
+                        Posts
+                    </router-link>
+                    <span class="text-gray-500">/</span> {{ topic.name }}
+                </div>
                 <div v-for="post in topic.posts" :key="post.id">
                     <PostItem :post="post"></PostItem>
                 </div>
@@ -20,11 +22,13 @@
 <script>
 import gql from "graphql-tag";
 import PostItem from "../../components/posts/ListItem";
+import PostItemLoad from "../../components/posts/ListItemLoad";
 
 export default {
     name: "PostList",
     components: {
-        PostItem
+        PostItem,
+        PostItemLoad
     },
     apollo: {
         topic: {
