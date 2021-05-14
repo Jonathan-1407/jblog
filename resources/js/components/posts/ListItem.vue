@@ -3,7 +3,7 @@
         <div class="p-4">
             <div class=" w-full lg:max-w-full">
                 <div
-                    class=" bg-white shadow-lg rounded-lg p-4 flex flex-col justify-between leading-normal"
+                    class="bg-white shadow-lg rounded-lg p-4 flex flex-col justify-between leading-normal"
                 >
                     <div class="mb-6">
                         <router-link
@@ -39,8 +39,12 @@
                     <div class="flex items-center">
                         <div class="text-sm">
                             <p class="text-gray-600 leading-none">
-                                By {{ post.author.name }} &#8226;
-                                {{ post.created_at }}
+                                By <b> {{ post.author.name }} </b> &#8226;
+                                {{
+                                    moment(post.created_at)
+                                        .startOf("day")
+                                        .fromNow()
+                                }}
                             </p>
                         </div>
                     </div>
@@ -51,10 +55,15 @@
 </template>
 
 <script>
+import moment from "moment";
+
 export default {
     name: "ListItem",
     props: {
         post: Object
-    }
+    },
+    data: () => ({
+        moment: moment
+    })
 };
 </script>
