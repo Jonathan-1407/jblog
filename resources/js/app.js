@@ -8,6 +8,7 @@ import ApolloClient from "apollo-boost";
 import Vue from "vue";
 import VueApollo from "vue-apollo";
 import VueRouter from "vue-router";
+import store from "./store";
 import "./bootstrap";
 
 /* Global Components */
@@ -99,5 +100,6 @@ Vue.component("navbar", Navbar);
 const app = new Vue({
     el: "#app",
     apolloProvider,
-    router
+    router,
+    store
 });
