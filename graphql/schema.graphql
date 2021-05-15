@@ -12,6 +12,11 @@ type Query {
     topic(slug: String! @eq): Topic @find
 }
 
+type Mutation {
+    login(email: String!, password: String!): User!
+    logout: User @guard
+}
+
 type User {
     id: ID!
     name: String!

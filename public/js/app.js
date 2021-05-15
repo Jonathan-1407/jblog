@@ -86295,7 +86295,11 @@ var routes = [{
 }];
 var apolloClient = new apollo_boost__WEBPACK_IMPORTED_MODULE_0__["default"]({
   // You should use an absolute URL here
-  uri: "http://blog.test/graphql"
+  uri: "http://blog.test/graphql",
+  headers: {
+    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+  },
+  credentials: 'include'
 });
 var apolloProvider = new vue_apollo__WEBPACK_IMPORTED_MODULE_2__["default"]({
   defaultClient: apolloClient

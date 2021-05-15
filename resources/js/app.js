@@ -69,7 +69,11 @@ const routes = [
 
 const apolloClient = new ApolloClient({
     // You should use an absolute URL here
-    uri: "http://blog.test/graphql"
+    uri: "http://blog.test/graphql",
+    headers: {
+        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+    },
+    credentials: 'include'
 });
 
 const apolloProvider = new VueApollo({
