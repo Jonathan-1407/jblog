@@ -14,6 +14,7 @@
                   mb-4
                   px-8
                 "
+                id="form-login"
             >
                 <h1 class="text-center text-4xl">JBLOG</h1>
                 <div
@@ -135,6 +136,7 @@ export default {
                         password: self.password
                     }
                 });
+                self.$router.push({ name: "Index" });
             } catch (err) {
                 self.errors = gqlErrors(err);
             }

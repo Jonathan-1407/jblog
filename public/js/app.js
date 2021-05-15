@@ -6023,6 +6023,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -6055,20 +6056,23 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 });
 
               case 5:
-                _context.next = 10;
+                self.$router.push({
+                  name: "Index"
+                });
+                _context.next = 11;
                 break;
 
-              case 7:
-                _context.prev = 7;
+              case 8:
+                _context.prev = 8;
                 _context.t0 = _context["catch"](2);
                 self.errors = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["gqlErrors"])(_context.t0);
 
-              case 10:
+              case 11:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, this, [[2, 7]]);
+        }, _callee, this, [[2, 8]]);
       }));
 
       function authenticate() {
@@ -6076,6 +6080,229 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
 
       return authenticate;
+    }()
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/auth/Register.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/views/auth/Register.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _graphql_auth_Register_gql__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../graphql/auth/Register.gql */ "./resources/js/graphql/auth/Register.gql");
+/* harmony import */ var _graphql_auth_Register_gql__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_graphql_auth_Register_gql__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils */ "./resources/js/utils.js");
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Register",
+  data: function data() {
+    return {
+      name: "",
+      email: "",
+      password: "",
+      errors: []
+    };
+  },
+  methods: {
+    register: function () {
+      var _register = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
+        var self;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                self = this;
+                self.errors = [];
+                _context.prev = 2;
+                _context.next = 5;
+                return self.$apollo.mutate({
+                  mutation: _graphql_auth_Register_gql__WEBPACK_IMPORTED_MODULE_1___default.a,
+                  variables: {
+                    email: self.email,
+                    password: self.password,
+                    name: self.name
+                  }
+                });
+
+              case 5:
+                self.$router.push({
+                  name: "Index"
+                });
+                _context.next = 11;
+                break;
+
+              case 8:
+                _context.prev = 8;
+                _context.t0 = _context["catch"](2);
+                self.errors = Object(_utils__WEBPACK_IMPORTED_MODULE_2__["gqlErrors"])(_context.t0);
+
+              case 11:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee, this, [[2, 8]]);
+      }));
+
+      function register() {
+        return _register.apply(this, arguments);
+      }
+
+      return register;
     }()
   }
 });
@@ -69683,7 +69910,8 @@ var render = function() {
         "form",
         {
           staticClass:
-            "\n              LgnForm\n              max-w-sm\n              mx-auto\n              shadow-lg\n              bg-white\n              rounded-lg\n              pt-6\n              pb-8\n              mb-4\n              px-8\n            "
+            "\n              LgnForm\n              max-w-sm\n              mx-auto\n              shadow-lg\n              bg-white\n              rounded-lg\n              pt-6\n              pb-8\n              mb-4\n              px-8\n            ",
+          attrs: { id: "form-login" }
         },
         [
           _c("h1", { staticClass: "text-center text-4xl" }, [_vm._v("JBLOG")]),
@@ -69857,19 +70085,158 @@ var render = function() {
         "form",
         {
           staticClass:
-            "\n    LgnForm\n    max-w-sm\n    mx-auto\n    shadow-lg\n    bg-white\n    rounded-lg\n    pt-6\n    pb-8\n    mb-4\n    px-8\n  "
+            "\n                LgnForm\n                max-w-sm\n                mx-auto\n                shadow-lg\n                bg-white\n                rounded-lg\n                pt-6\n                pb-8\n                mb-4\n                px-8\n              ",
+          attrs: { id: "form-register" }
         },
         [
           _c("h1", { staticClass: "text-center text-4xl" }, [_vm._v("JBLOG")]),
           _vm._v(" "),
+          _vm.errors.length
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "p-2 bg-red-600 text-gray-100 rounded-sm mb-2 text-sm text-center"
+                },
+                _vm._l(_vm.errors, function(error, index) {
+                  return _c("div", { key: index }, [
+                    _vm._v(
+                      "\n                    " +
+                        _vm._s(error.message) +
+                        "\n                "
+                    )
+                  ])
+                }),
+                0
+              )
+            : _vm._e(),
+          _vm._v(" "),
           _c("div", { staticClass: "MskForm" }, [
-            _vm._m(0),
+            _c("div", { staticClass: "mb-6" }, [
+              _c(
+                "label",
+                { staticClass: "block text-gray-700 text-sm font-bold mb-2" },
+                [
+                  _vm._v(
+                    "\n                        Full Name\n                    "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.name,
+                    expression: "name"
+                  }
+                ],
+                staticClass:
+                  "\n                          shadow\n                          appearance-none\n                          border\n                          rounded\n                          w-full\n                          py-4\n                          px-3\n                          text-gray-700\n                          mb-3\n                          leading-tight\n                          focus:outline-none\n                          focus:shadow-outline\n                        ",
+                attrs: { type: "text", placeholder: "Full name" },
+                domProps: { value: _vm.name },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.name = $event.target.value
+                  }
+                }
+              })
+            ]),
             _vm._v(" "),
-            _vm._m(1),
+            _c("div", { staticClass: "mb-4" }, [
+              _c(
+                "label",
+                { staticClass: "block text-gray-700 text-sm font-bold mb-2" },
+                [
+                  _vm._v(
+                    "\n                        Email\n                    "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.email,
+                    expression: "email"
+                  }
+                ],
+                staticClass:
+                  "\n                          shadow\n                          apperance-none\n                          border\n                          rounded\n                          w-full\n                          py-4\n                          px-3\n                          text-gray-700\n                          leading-tight\n                          focus:outline-none\n                          focus:shadow-outline\n                        ",
+                attrs: { type: "text", placeholder: "Example@email.com" },
+                domProps: { value: _vm.email },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.email = $event.target.value
+                  }
+                }
+              })
+            ]),
             _vm._v(" "),
-            _vm._m(2),
+            _c("div", { staticClass: "mb-6" }, [
+              _c(
+                "label",
+                { staticClass: "block text-gray-700 text-sm font-bold mb-2" },
+                [
+                  _vm._v(
+                    "\n                        Password\n                    "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.password,
+                    expression: "password"
+                  }
+                ],
+                staticClass:
+                  "\n                          shadow\n                          appearance-none\n                          border\n                          rounded\n                          w-full\n                          py-4\n                          px-3\n                          text-gray-700\n                          mb-3\n                          leading-tight\n                          focus:outline-none\n                          focus:shadow-outline\n                        ",
+                attrs: { type: "password", placeholder: "******************" },
+                domProps: { value: _vm.password },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.password = $event.target.value
+                  }
+                }
+              })
+            ]),
             _vm._v(" "),
-            _vm._m(3),
+            _c("div", { staticClass: "flex items-center justify-end" }, [
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "\n                          bg-green-500\n                          hover:bg-green-700\n                          text-white\n                          font-bold\n                          py-2\n                          px-4\n                          rounded\n                          focus:outline-none\n                          focus:shadow-outline\n                        ",
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.register()
+                    }
+                  }
+                },
+                [
+                  _vm._v(
+                    "\n                        Sign Up\n                    "
+                  )
+                ]
+              )
+            ]),
             _vm._v(" "),
             _c(
               "p",
@@ -69884,7 +70251,11 @@ var render = function() {
                     staticClass: "text-black-700 font-bold hover:underline",
                     attrs: { to: { name: "Login" } }
                   },
-                  [_vm._v("Login")]
+                  [
+                    _vm._v(
+                      "\n                        Login\n                    "
+                    )
+                  ]
                 )
               ],
               1
@@ -69895,93 +70266,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-4" }, [
-      _c(
-        "label",
-        { staticClass: "block text-gray-700 text-sm font-bold mb-2" },
-        [_vm._v("\n                        Email\n                    ")]
-      ),
-      _vm._v(" "),
-      _c("input", {
-        staticClass:
-          "\n          shadow\n          apperance-none\n          border\n          rounded\n          w-full\n          py-4\n          px-3\n          text-gray-700\n          leading-tight\n          focus:outline-none\n          focus:shadow-outline\n        ",
-        attrs: {
-          id: "username",
-          type: "text",
-          placeholder: "Example@email.com"
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-6" }, [
-      _c(
-        "label",
-        { staticClass: "block text-gray-700 text-sm font-bold mb-2" },
-        [_vm._v("\n                        Password\n                    ")]
-      ),
-      _vm._v(" "),
-      _c("input", {
-        staticClass:
-          "\n          shadow\n          appearance-none\n          border\n          rounded\n          w-full\n          py-4\n          px-3\n          text-gray-700\n          mb-3\n          leading-tight\n          focus:outline-none\n          focus:shadow-outline\n        ",
-        attrs: {
-          id: "password",
-          type: "password",
-          placeholder: "******************"
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mb-6" }, [
-      _c(
-        "label",
-        { staticClass: "block text-gray-700 text-sm font-bold mb-2" },
-        [
-          _vm._v(
-            "\n                        Reply Password\n                    "
-          )
-        ]
-      ),
-      _vm._v(" "),
-      _c("input", {
-        staticClass:
-          "\n          shadow\n          appearance-none\n          border\n          rounded\n          w-full\n          py-4\n          px-3\n          text-gray-700\n          mb-3\n          leading-tight\n          focus:outline-none\n          focus:shadow-outline\n        ",
-        attrs: {
-          id: "password",
-          type: "password",
-          placeholder: "******************"
-        }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "flex items-center justify-end" }, [
-      _c(
-        "button",
-        {
-          staticClass:
-            "\n          bg-green-500\n          hover:bg-green-700\n          text-white\n          font-bold\n          py-2\n          px-4\n          rounded\n          focus:outline-none\n          focus:shadow-outline\n        "
-        },
-        [_vm._v("\n                        Sign Up\n                    ")]
-      )
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -86538,9 +86823,12 @@ var apolloClient = new apollo_boost__WEBPACK_IMPORTED_MODULE_0__["default"]({
   // You should use an absolute URL here
   uri: "http://blog.test/graphql",
   headers: {
-    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+    "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]').content
   },
-  credentials: 'include'
+  credentials: "include",
+  onError: function onError(err) {
+    return console.log(err);
+  }
 });
 var apolloProvider = new vue_apollo__WEBPACK_IMPORTED_MODULE_2__["default"]({
   defaultClient: apolloClient
@@ -86551,7 +86839,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_3__["default"]({
 });
 /* Global components */
 
-vue__WEBPACK_IMPORTED_MODULE_1___default.a.component('navbar', _components_navigation_Navbar_vue__WEBPACK_IMPORTED_MODULE_5__["default"]);
+vue__WEBPACK_IMPORTED_MODULE_1___default.a.component("navbar", _components_navigation_Navbar_vue__WEBPACK_IMPORTED_MODULE_5__["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -86940,6 +87228,139 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/graphql/auth/Register.gql":
+/*!************************************************!*\
+  !*** ./resources/js/graphql/auth/Register.gql ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+    var doc = {"kind":"Document","definitions":[{"kind":"OperationDefinition","operation":"mutation","name":{"kind":"Name","value":"Register"},"variableDefinitions":[{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"email"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"password"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]},{"kind":"VariableDefinition","variable":{"kind":"Variable","name":{"kind":"Name","value":"name"}},"type":{"kind":"NonNullType","type":{"kind":"NamedType","name":{"kind":"Name","value":"String"}}},"directives":[]}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"register"},"arguments":[{"kind":"Argument","name":{"kind":"Name","value":"email"},"value":{"kind":"Variable","name":{"kind":"Name","value":"email"}}},{"kind":"Argument","name":{"kind":"Name","value":"password"},"value":{"kind":"Variable","name":{"kind":"Name","value":"password"}}},{"kind":"Argument","name":{"kind":"Name","value":"name"},"value":{"kind":"Variable","name":{"kind":"Name","value":"name"}}}],"directives":[],"selectionSet":{"kind":"SelectionSet","selections":[{"kind":"Field","name":{"kind":"Name","value":"id"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"email"},"arguments":[],"directives":[]},{"kind":"Field","name":{"kind":"Name","value":"name"},"arguments":[],"directives":[]}]}}]}}],"loc":{"start":0,"end":183}};
+    doc.loc.source = {"body":"mutation Register($email: String!, $password: String!, $name: String!) {\n    register(email: $email, password: $password, name: $name) {\n        id\n        email\n        name\n    }\n}\n","name":"GraphQL request","locationOffset":{"line":1,"column":1}};
+  
+
+    var names = {};
+    function unique(defs) {
+      return defs.filter(
+        function(def) {
+          if (def.kind !== 'FragmentDefinition') return true;
+          var name = def.name.value
+          if (names[name]) {
+            return false;
+          } else {
+            names[name] = true;
+            return true;
+          }
+        }
+      )
+    }
+  
+
+    // Collect any fragment/type references from a node, adding them to the refs Set
+    function collectFragmentReferences(node, refs) {
+      if (node.kind === "FragmentSpread") {
+        refs.add(node.name.value);
+      } else if (node.kind === "VariableDefinition") {
+        var type = node.type;
+        if (type.kind === "NamedType") {
+          refs.add(type.name.value);
+        }
+      }
+
+      if (node.selectionSet) {
+        node.selectionSet.selections.forEach(function(selection) {
+          collectFragmentReferences(selection, refs);
+        });
+      }
+
+      if (node.variableDefinitions) {
+        node.variableDefinitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+
+      if (node.definitions) {
+        node.definitions.forEach(function(def) {
+          collectFragmentReferences(def, refs);
+        });
+      }
+    }
+
+    var definitionRefs = {};
+    (function extractReferences() {
+      doc.definitions.forEach(function(def) {
+        if (def.name) {
+          var refs = new Set();
+          collectFragmentReferences(def, refs);
+          definitionRefs[def.name.value] = refs;
+        }
+      });
+    })();
+
+    function findOperation(doc, name) {
+      for (var i = 0; i < doc.definitions.length; i++) {
+        var element = doc.definitions[i];
+        if (element.name && element.name.value == name) {
+          return element;
+        }
+      }
+    }
+
+    function oneQuery(doc, operationName) {
+      // Copy the DocumentNode, but clear out the definitions
+      var newDoc = {
+        kind: doc.kind,
+        definitions: [findOperation(doc, operationName)]
+      };
+      if (doc.hasOwnProperty("loc")) {
+        newDoc.loc = doc.loc;
+      }
+
+      // Now, for the operation we're running, find any fragments referenced by
+      // it or the fragments it references
+      var opRefs = definitionRefs[operationName] || new Set();
+      var allRefs = new Set();
+      var newRefs = new Set();
+
+      // IE 11 doesn't support "new Set(iterable)", so we add the members of opRefs to newRefs one by one
+      opRefs.forEach(function(refName) {
+        newRefs.add(refName);
+      });
+
+      while (newRefs.size > 0) {
+        var prevRefs = newRefs;
+        newRefs = new Set();
+
+        prevRefs.forEach(function(refName) {
+          if (!allRefs.has(refName)) {
+            allRefs.add(refName);
+            var childRefs = definitionRefs[refName] || new Set();
+            childRefs.forEach(function(childRef) {
+              newRefs.add(childRef);
+            });
+          }
+        });
+      }
+
+      allRefs.forEach(function(refName) {
+        var op = findOperation(doc, refName);
+        if (op) {
+          newDoc.definitions.push(op);
+        }
+      });
+
+      return newDoc;
+    }
+    
+    module.exports = doc;
+    
+        module.exports["Register"] = oneQuery(doc, "Register");
+        
+
+
+/***/ }),
+
 /***/ "./resources/js/utils.js":
 /*!*******************************!*\
   !*** ./resources/js/utils.js ***!
@@ -86959,20 +87380,37 @@ function gqlErrors(err) {
 
   var replaceInternal = function replaceInternal(errors, err) {
     return hasInternal(errors) ? errors.filter(function (e) {
-      return e.internal;
+      return !e.internal;
     }).concat(err) : errors;
   };
 
   return replaceInternal(((err === null || err === void 0 ? void 0 : err.graphQLErrors) || []).map(function (error) {
-    var _error$path;
+    var _error$extensions, _error$path;
+
+    if ("validation" === ((_error$extensions = error.extensions) === null || _error$extensions === void 0 ? void 0 : _error$extensions.category)) {
+      var _error$extensions2;
+
+      var validationErr = ((_error$extensions2 = error.extensions) === null || _error$extensions2 === void 0 ? void 0 : _error$extensions2.validation) || {};
+      Object.keys(validationErr).map(function (key) {
+        return validationErr[key];
+      });
+      return Object.keys(validationErr).map(function (key) {
+        return validationErr[key];
+      }).flat().map(function (v) {
+        return {
+          message: v,
+          internal: false
+        };
+      });
+    }
 
     return {
       message: error.message,
       internal: Boolean(!(error !== null && error !== void 0 && (_error$path = error.path) !== null && _error$path !== void 0 && _error$path.length))
     };
   }), {
-    message: 'Something bad happened'
-  });
+    message: "Something bad happened"
+  }).flat();
 }
 
 /***/ }),
@@ -87125,15 +87563,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Register_vue_vue_type_template_id_0a273bdb___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Register.vue?vue&type=template&id=0a273bdb& */ "./resources/js/views/auth/Register.vue?vue&type=template&id=0a273bdb&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Register.vue?vue&type=script&lang=js& */ "./resources/js/views/auth/Register.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Register_vue_vue_type_template_id_0a273bdb___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Register_vue_vue_type_template_id_0a273bdb___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -87147,6 +87587,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/views/auth/Register.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/auth/Register.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/views/auth/Register.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Register.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/views/auth/Register.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Register_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 

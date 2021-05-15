@@ -71,9 +71,11 @@ const apolloClient = new ApolloClient({
     // You should use an absolute URL here
     uri: "http://blog.test/graphql",
     headers: {
-        'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+        "X-CSRF-TOKEN": document.querySelector('meta[name="csrf-token"]')
+            .content
     },
-    credentials: 'include'
+    credentials: "include",
+    onError: (err) => console.log(err)
 });
 
 const apolloProvider = new VueApollo({
@@ -86,7 +88,7 @@ const router = new VueRouter({
 });
 
 /* Global components */
-Vue.component('navbar', Navbar);
+Vue.component("navbar", Navbar);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
